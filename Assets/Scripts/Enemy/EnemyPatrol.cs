@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
+    [SerializeField] private int damage = 10;
     private bool enMovimiento;
     private Animator animator;
     public float velocidad = 2f;
@@ -30,21 +31,26 @@ public class EnemyPatrol : MonoBehaviour
         {
             // Invertimos la dirección (de -1 a 1, o de 1 a -1)
             direccion = direccion * -1;
-            if (direccion < 0)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-
             if (direccion > 0)
             {
                 transform.localScale = new Vector3(1, 1, 1);
             }
 
-            // Aquí podrían voltear el SpriteRenderer para que mire al otro lado
+            if (direccion < 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
-    }
-  
+        else
+        {
+            collision.gameObject.GetComponent<PlayerStats>().TakeDamage(10);
+        }
 
+        // Aquí podrían voltear el SpriteRenderer para que mire al otro lado
+
+       
+        
+    }
 }
 
 

@@ -8,6 +8,8 @@ public class TurretShooting : MonoBehaviour
 
     [SerializeField] private float fireRate = 5f; // Cada cuántos segundos dispara
     private float nextFireTime = 0f;
+    public AudioSource sfxSource;
+    public AudioClip sonidoBala;
 
     void Update()
     {
@@ -20,6 +22,7 @@ public class TurretShooting : MonoBehaviour
 
     private void Shoot()
     {
+        sfxSource.PlayOneShot(sonidoBala);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         // Configuramos la bala como enemiga

@@ -18,7 +18,7 @@ public class PlayerBullet : MonoBehaviour
             // Aquí delegamos el daño al script de vida del enemigo
             Destroy(gameObject);
         }
-        else if (collision.CompareTag("Suelo"))
+        else if (collision.CompareTag("Limite"))
         {
             Destroy(gameObject);
         }

@@ -5,14 +5,20 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float bulletSpeed = 12f;
+    public AudioSource sfxSource;
+    public AudioClip sonidoBala;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) Shoot();
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
     }
 
     private void Shoot()
     {
+        sfxSource.PlayOneShot(sonidoBala);
         // 1. Instanciamos una copia del Prefab en firePoint
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
