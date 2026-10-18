@@ -2941,11 +2941,10 @@ MonoBehaviour:
   sonidoSalto: {fileID: 8300000, guid: b2dd1566291cd3340988bebb4f3da6fd, type: 3}
   Velocidad: 5
   FuerzaSalto: 10
-  LongitudRaycast: 0.7
+  LongitudRaycast: 0.8
   CapaSuelo:
     serializedVersion: 2
     m_Bits: 8
-  animator: {fileID: 5352160014137820414}
 --- !u!114 &3259051904510104464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3193,7 +3192,7 @@ GameObject:
   - component: {fileID: 4683929240096225407}
   - component: {fileID: 2904331753765534455}
   - component: {fileID: 5650482888817687395}
-  - component: {fileID: 8845515205201049877}
+  - component: {fileID: 8845515205201049878}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Player
@@ -3324,7 +3323,7 @@ Transform:
   m_GameObject: {fileID: 4816162321419171466}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -123.11, y: 3.44, z: 0}
+  m_LocalPosition: {x: -123.11, y: 3.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3713,7 +3712,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8845515205201049877
+--- !u!114 &8845515205201049878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3722,9 +3721,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4816162321419171466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da0c9057084c30f499a095f1a6e58662, type: 3}
+  m_Script: {fileID: 11500000, guid: 572bb4d2e628e5f489bb8105e775bcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Velocidad: 5
+  LongitudRaycast: 0.8
+  CapaSuelo:
+    serializedVersion: 2
+    m_Bits: 8
+  animator: {fileID: 5352160014137820414}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
