@@ -6,7 +6,7 @@ public class TurretShooting : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private float bulletSpeed = 6f;
 
-    [SerializeField] private float fireRate = 5f; // Cada cuántos segundos dispara
+    [SerializeField] private float fireRate = 5f; 
     private float nextFireTime = 0f;
     public AudioSource sfxSource;
     public AudioClip sonidoBala;
@@ -25,7 +25,7 @@ public class TurretShooting : MonoBehaviour
         sfxSource.PlayOneShot(sonidoBala);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-        // Configuramos la bala como enemiga
+        
         EnemyBullet proj = bullet.GetComponent<EnemyBullet>();
         if (proj != null)
         {
@@ -33,6 +33,6 @@ public class TurretShooting : MonoBehaviour
         }
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = new Vector2(-bulletSpeed, 0f); // Dispara hacia la izquierda (ajusta según necesidad)
+        rb.linearVelocity = new Vector2(-bulletSpeed, 0f); 
     }
 }

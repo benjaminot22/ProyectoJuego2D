@@ -3,11 +3,11 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     [SerializeField] private int damage = 10;
-    [SerializeField] private float lifeTime = 3f;  // segundos antes de autodestruirse
+    [SerializeField] private float lifeTime = 3f; 
 
     void Start()
     {
-        // Red de seguridad: se destruye solo si no impacta nada antes
+       
         Destroy(gameObject, lifeTime);
     }
 
@@ -15,7 +15,7 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            // Aquí delegamos el daño al script de vida del enemigo
+            
             Destroy(gameObject);
         }
         else if (collision.CompareTag("Limite"))

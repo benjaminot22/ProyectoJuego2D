@@ -4,11 +4,11 @@ public class EnemyBullet : MonoBehaviour
 {
     [SerializeField] private int damage = 20;
     [SerializeField] private float lifeTime = 5f;
-    public string tipoProyectil = "Enemy"; // "Player" o "Enemy"
+    public string tipoProyectil = "Enemy"; 
 
     void Start()
     {
-        Destroy(gameObject, lifeTime); // Red de seguridad
+        Destroy(gameObject, lifeTime); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
