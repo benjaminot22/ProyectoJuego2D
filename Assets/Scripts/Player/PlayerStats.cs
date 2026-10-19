@@ -5,14 +5,10 @@ public class PlayerStats : MonoBehaviour
     public AudioSource sfxSource;
     public AudioClip sonidoDamage;
     [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int startCoins = 0;
     private int currentHealth;
-    public int currentcoins;
-
     void Start()
     {
         currentHealth = maxHealth;
-        currentcoins = startCoins;
     }
 
     public void TakeDamage(int damage)
@@ -28,10 +24,4 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void TakeCoins(int coins)
-    {
-        currentcoins += coins;
-        Debug.Log("Monedas conseguidas: " + currentcoins);
-
-    }
 }
