@@ -6,7 +6,6 @@ public class PlayerAnimations : MonoBehaviour
     public float LongitudRaycast = 0.1f;
     public LayerMask CapaSuelo;
     private bool Ensuelo;
-    private Rigidbody2D rb;
     public Animator animator;
 
     void Update()
